@@ -83,11 +83,9 @@ class MuushigGame:
                 best_card = card
                 continue
 
-            # Шинэ хөзөр хөг, хуучин хөзөр хөг биш бол шинэ нь илүү
             if card.symbol == self.upCard.symbol and best_card.symbol != self.upCard.symbol:
                 best_player = player
                 best_card = card
-            # Хоёулаа ижил дүрс заавал (хоёулаа хөг эсвэл хоёулаа lead_symbol)
             elif card.symbol == best_card.symbol:
                 if RANK_VALUES[card.rank] > RANK_VALUES[best_card.rank]:
                     best_player = player
